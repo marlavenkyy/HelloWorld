@@ -20,3 +20,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: PublishBuildArtifacts@1
+  inputs:
+    publish: /home/vsts/work/1/s/target/helloworld.war
+    artifact: helloworld.war 
